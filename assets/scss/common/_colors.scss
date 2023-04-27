@@ -1,0 +1,29 @@
+$red-dark: #c71b0f;
+$red-medium: #d3472c;
+$red-light: #f8be90;
+$gold: gold;
+$silver: silver;
+$bronze: #b86a0b;
+
+.white { color: white; }
+.red-d { color: $red-dark; }
+.red-m { color: $red-medium; }
+.red-l { color: $red-light; }
+.gold { color: $gold; }
+.silver { color: $silver; }
+.bronze { color: $bronze; }
+
+.bg-white {
+  background-color: white;
+}
+.bg-red-d {
+  background-color: $red-dark;
+  background-image: url('@/assets/img/red-d-card.png');
+  background-size: cover;
+}
+.bg-red-m {
+  background-color: $red-medium;
+  background-image: url('@/assets/img/red-card-2.png');
+  background-size: cover;
+}
+.bg-red-l { background-color: $red-light; }

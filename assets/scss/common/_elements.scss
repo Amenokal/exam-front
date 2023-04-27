@@ -1,0 +1,252 @@
+.card {
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+
+  h2 {
+    font-size: 2rem;
+    letter-spacing: .1rem;
+  }
+}
+
+.sm-card {
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+
+  * {
+    letter-spacing: 0;
+  }
+}
+
+.splitter {
+  height: 1px;
+  width: 100%;
+  display: block;
+}
+
+
+// --------------------------
+// USER LOGIN/LOGOUT
+
+.user-banner {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  
+  .button-container {
+    padding: .5rem;
+  }
+  .button-container button {
+    margin: 0 0 0 .5rem;
+  }
+}
+
+// -•------------------------------------------•-
+// POPUP
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    border: 3px solid white;
+    padding: 2rem;
+    width: 450px;
+    height: max-content;
+
+    button {
+      background-color: $red-dark;
+      border: 3px solid white;
+      border-radius: 10px;
+      transition: .2s;
+      cursor: pointer;
+
+      &:hover {
+        color: $red-dark;
+        background-color: white;
+      }
+    }
+
+    form {
+      margin: 2rem 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      label {
+        width: 100%;
+        margin-left: 5rem;
+        text-align: left;
+      }
+
+      input {
+        width: 80%;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: .5rem;
+        padding: .3rem;
+        color: $red-dark;
+        border: 3px solid $red-medium;
+        letter-spacing: 0;
+
+        &:focus {
+          outline: none
+        }
+      }
+
+      button {
+        color: white;
+        background-color: $red-dark;
+        border: 3px solid white;
+        border-radius: 10px;
+        padding: .5rem 1rem;
+        margin: 1.5rem .5rem 0;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+          border-color: $red-dark;
+          color: $red-dark;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.popup-transition-enter-active,
+.popup-transition-leave-active {
+  transition: 0.4s;
+}
+.popup-transition-enter-from,
+.popup-transition-leave-to {
+  opacity: 0;
+  transform: translateY(.5rem)
+}
+
+.blurred {
+  filter: blur(2px);
+}
+
+// -•------------------------------------------•-
+// PODIUM
+
+.podium {
+  display: flex;
+  align-items: flex-end;
+
+  &>.col {
+    width: 33%;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .third {
+    .bar {
+      height: 200px;
+    }
+  }
+  .first {
+    .bar {
+      height: 400px;
+    }
+  }
+  .second {
+    .bar {
+      height: 300px;
+    }
+  }
+  
+  .bar {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .shop {
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.page-podium {
+  .podium {
+    .bar {
+      background-color: $red-medium;
+    }
+  }
+}
+
+// -------------------------
+// SPINNER
+
+.spinner {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid $red-medium;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: $red-medium transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

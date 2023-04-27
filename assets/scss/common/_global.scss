@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+}
+
+.app-container:not(.home) {
+  width: 100vw;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: .5rem 1rem;
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .2s;
+  background-color: $red-dark;
+
+  &:hover {
+    border-color: $red-dark;
+    color: $red-dark;
+    background-color: white;
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+input {
+  border: none;
+  height: 2rem;
+  padding: .5rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  color: $red-medium;
+  
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,210 @@
+.page-map main {
+
+  .search-wrapper {
+    display: flex;
+
+    & > div {
+      width: 50%;
+      
+      &:first-of-type {
+        margin-right: .5rem;
+      }
+      &:last-of-type {
+        margin-left: .5rem;
+      }
+    }
+
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        border: 3px solid white;
+        border-radius: 5px;
+        color: white;
+        height: 2rem;
+        width: 2.2rem;
+        box-sizing: border-box;
+        margin-left: .5rem;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+          color: $red-medium;
+          background: white;
+        }
+      }
+    }
+  }
+
+  .map-container {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    position: relative;
+  }
+
+  .map-tools {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+    margin: .5rem;
+
+    button {
+      margin: 0;
+
+      &.on {
+        background-color: white;
+        color: $red-medium;
+        border-color: $red-medium;
+      }
+    }
+  }
+
+  .search-city-card,
+  .search-shop-card {
+    position: relative;
+    
+    h2 {
+      letter-spacing: .1rem;
+      margin-bottom: .5rem;
+    }
+
+    .results-container {
+      background-color: white;
+      position: absolute;
+      top: 6rem;
+      border: 3px solid $red-medium;
+      border-radius: 10px;
+      z-index: 10000;
+
+
+      p { 
+        margin: .5rem;
+        padding: .5rem;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+          background-color: $red-medium;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .shop-card {
+    margin-left: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    .review-container {
+      height: calc(100% - 9rem);
+      margin: 1rem 0;
+      
+      &.noted {
+        height: calc(100% - 5rem);
+      }
+
+      .review-header {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .button-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      button {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  .empty-shop-card {
+    padding: 1rem;
+
+    .legend {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .legend-infos {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+#map {
+  min-height: 600px;
+  width: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.leaflet-marker-icon {
+  font-size: .7rem !important;
+  letter-spacing: 0 !important;
+}
+.mycluster {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #db8a34;
+    border: 3px solid #ffec7e;
+    color: white;
+    text-align: center;
+    font-size: 20px;    
+    line-height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &>* {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.results-container .button-container button:last-child {
+  transform: rotate(180deg);
+}
+
+.shop-result {
+  display: flex;
+  flex-direction: column;
+  span { font-size: .8rem }
+}
+
+
+.add-shop-header {
+  display: flex;
+  
+  .icon{
+    border: 3px solid white;
+    border-radius: 5px;
+    color: white;
+    height: 2rem;
+    width: 2.2rem;
+    box-sizing: border-box;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      color: $red-medium;
+      background: white;
+    }
+  }
+}

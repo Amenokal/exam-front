@@ -1,0 +1,174 @@
+.page-profile {
+
+  section.left {
+
+    .user-infos {
+      display: flex;
+      margin-bottom: 1rem;
+      height: auto;
+
+      h2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &>div:first-child {
+        width: calc(100% - 3rem);
+      }
+
+      &>div:last-child {
+        width: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .icon {
+          height: 2.1rem;
+          width: 2.1rem;
+          border: 3px solid white;
+          border-radius: 5px;
+          padding: .2rem;
+          box-sizing: border-box;
+          margin: .25rem;
+          cursor: pointer;
+          transition: .2s;
+
+          &:hover {
+            background-color: white;
+            color: $red-medium;
+          }
+        }
+      }
+    }
+
+    &>div:last-child {
+      height: calc(80% - 1rem);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .podium {
+
+      display: flex;
+      
+      @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        
+        .col {
+          width: 100%;
+          margin-bottom: 1rem;
+          
+          .bar {
+            height: 30%;
+          }
+        }
+      }
+
+
+      .podium-infos {
+        height: 600px;
+      }
+
+      .trophee-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .t-i-data {
+          p, span {
+            text-align: center;
+            width: 100%;
+          }
+          
+          span {
+            display: block;
+            font-size: .8rem
+          }
+        }
+      }
+    }
+  }
+
+  section.right {
+    &>.review-container {
+      overflow-y: scroll;
+    }
+  }
+}
+
+.review-wrapper {
+  overflow: scroll;
+  height: calc(100vh - 12rem);
+  border: 5px solid white;
+  box-sizing: border-box;
+
+  .review-header {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    
+    span {
+      font-size: 1.2rem;
+      display: block;
+    }
+
+    .icon {
+      border: 3px solid white;
+      border-radius: 3px;
+      padding: .25rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: white;
+        color: $red-medium  !important;
+      }
+    }
+  }
+
+  .review-container:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.review-container {
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  &>div {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-top: 1px solid white;
+
+    p {
+      color: white;
+      letter-spacing: .1rem;
+    }
+  }
+
+  .note-wrapper {
+    display: flex;
+    justify-content: space-around;
+
+
+    .icon {
+      color: white !important;
+      cursor: pointer;
+      transition: .2s;
+    }
+  }
+  
+  @media (max-width: 1400px) and (min-width: 900px) {
+    .note-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+    .star-container {
+      display: flex;
+    }
+  }
+}

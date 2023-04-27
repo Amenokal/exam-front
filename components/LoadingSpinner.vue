@@ -1,0 +1,5 @@
+<template>
+  <div class="spinner">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+</template>
